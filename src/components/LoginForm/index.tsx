@@ -2,7 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 
 const LoginForm: FC = () => {
-  return <div>登录表单</div>;
+  return <LoginFormContainer>登录表单</LoginFormContainer>;
 };
 
 const LoginFormContainer = styled.div`
