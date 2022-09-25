@@ -39,7 +39,9 @@ const LoginFormStepOne: FC<LoginFormStepOneProps> = (props) => {
       setPasswordErrorMessage("");
     } else if (password.length < 8 || password.length > 32) {
       setPasswordErrorMessage("密码长度为8~32，请检查输入");
-    } else if (!/^[0-9a-zA-Z\u4e00-\u9fa5]+$/.test(password)) {
+    } else if (
+      !/^[0-9a-zA-Z\x21-\x2f\x3a-\x40\x5b-\x60\x7B-\x7F]+$/.test(password)
+    ) {
       setPasswordErrorMessage("密码只能包含数字、字母和标点符号，请检查输入");
     } else {
       setPasswordErrorMessage("");
