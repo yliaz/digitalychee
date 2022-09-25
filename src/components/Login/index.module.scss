@@ -1,6 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: #f7f7fa;
+}
+
+.title {
+  line-height: 50px;
+  padding: 104px 0 22px 0;
+  font-size: 36px;
+  color: #333333;
+  letter-spacing: 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form {
+  flex: 1;
+  margin-top: 104px;
+}
+
 .banner {
-    background-image: url('~@/assets/images/iPhone_banner@2x.png');
-    background-size: 100% 100%;
-    width: 750px;
-    height: 351px;
+  background-image: url("~@/assets/images/iPhone_banner@2x.png");
+  background-size: 100% 100%;
+  width: 750px;
+  height: 351px;
+  @media screen and (-webkit-min-device-pixel-ratio: 3),
+    screen and (min--moz-device-pixel-ratio: 3) {
+    background-image: url("~@/assets/images/iPhone_banner@3x.png");
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: url("~@/assets/images/pc_banner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    .form {
+      width: 100%;
+      margin-top: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 216px;
+    }
+  }
+  .title {
+    display: none;
+  }
+  .banner {
+    display: none;
+  }
 }

@@ -1,0 +1,29 @@
+.container {
+  width: 456px;
+  min-height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fc6161;
+  color: #ffffff;
+  box-shadow: 0 0 14px 0 rgba(133, 137, 143, 0.4);
+  border-radius: 8px;
+  transition: all 0.25s;
+  &.show {
+    opacity: 1;
+  }
+  &.hide {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 100%;
+    background: transparent;
+    color: #fc6161;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 28px;
+  }
+}

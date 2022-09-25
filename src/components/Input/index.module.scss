@@ -1,0 +1,70 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.inputWrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.customInput {
+  outline-style: none;
+  border: 2px solid #d0d3d6;
+  border-radius: 12px;
+  font-size: 32px;
+  line-height: 45px;
+  padding: 22px 0 21px 96px;
+  color: #3b3c3d;
+  letter-spacing: 0;
+  font-weight: 400;
+  &.warning {
+    border-color: #fa5757;
+  }
+  &:focus {
+    border-color: #3371ff;
+    outline: 0;
+    &.warning {
+      border-color: #fa5757;
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  width: 40px;
+  height: 36px;
+  margin-top: -18px;
+  background-image: url("~@/assets/images/iphone_email@2x.png");
+  background-size: 100% 100%;
+  @media screen and (-webkit-min-device-pixel-ratio: 3),
+    screen and (min--moz-device-pixel-ratio: 3) {
+    background-image: url("~@/assets/images/iphone_email@3x.png");
+  }
+  &.password {
+    width: 36px;
+    height: 40px;
+    left: 34px;
+    margin-top: -20px;
+    background-image: url("~@/assets/images/iphone_password@2x.png");
+    @media screen and (-webkit-min-device-pixel-ratio: 3),
+      screen and (min--moz-device-pixel-ratio: 3) {
+      background-image: url("~@/assets/images/iphone_password@3x.png");
+    }
+  }
+}
+
+.errorMessage {
+  line-height: 33px;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #fa5757;
+  letter-spacing: 0;
+  font-weight: 400;
+}
