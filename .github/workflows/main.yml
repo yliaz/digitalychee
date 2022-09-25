@@ -1,3 +1,4 @@
+# 使用 Github Action自动部署，详见我的博客：https://zhuye.dev/blogs/2021-11-30-auto-deploy-using-github-actions.html
 name: Build app and deploy to tencent cloud
 on:
   #监听push操作，在进行 git push 时会执行这个 action
